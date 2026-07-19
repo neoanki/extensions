@@ -1,0 +1,20 @@
+name: Validate marketplace
+on:
+  pull_request:
+    paths: [catalog.json, schema/**, scripts/**, .github/workflows/validate.yml]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - run: git fetch origin main --depth=1
+      - run: node scripts/validate-catalog.mjs --base origin/main

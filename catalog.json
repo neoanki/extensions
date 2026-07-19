@@ -1,0 +1,6 @@
+{
+  "$schema": "./schema/catalog.schema.json",
+  "format": "neo-anki-extension-catalog",
+  "schemaVersion": 1,
+  "extensions": []
+}

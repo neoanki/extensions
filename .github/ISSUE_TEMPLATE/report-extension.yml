@@ -1,0 +1,17 @@
+name: Report a listed extension
+description: Report security, privacy, quality, or policy concerns about a marketplace listing.
+title: "[Report]: "
+labels: [extension-report]
+body:
+  - type: input
+    id: extension
+    attributes: { label: Extension id, placeholder: com.example.extension }
+    validations: { required: true }
+  - type: dropdown
+    id: concern
+    attributes: { label: Concern, options: [Security, Privacy, Misleading claims, Broken package, Licensing, Other] }
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes: { label: Evidence, description: Include versions, reproduction steps, and links without sharing secrets. }
+    validations: { required: true }
