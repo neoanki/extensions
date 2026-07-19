@@ -16,7 +16,7 @@ Publisher signing keys cannot be changed in a normal update. For a legitimate ke
 
 ## Review policy
 
-- One code-owner approval, all conversations resolved, and the required `validate` check are required.
+- One code-owner approval, all conversations resolved, and the required `validate` check are the normal merge policy. While the organization has only one maintainer, that repository administrator may merge after completing the maintainer checklist; the merge commit remains the public approval record. Add a second code owner before removing that temporary administrative bypass.
 - An extension may not impersonate NeoAnki, hide material data collection, request unjustified permissions, facilitate academic dishonesty, or present unsupported pedagogical/medical claims as fact.
 - Network domains and data flows must be disclosed in the extension repository.
 - Marketplace review is not a sandbox or a warranty. NeoAnki still verifies the signed package and shows capabilities for explicit confirmation before installation.

@@ -1,7 +1,6 @@
 name: Validate marketplace
 on:
   pull_request:
-    paths: [catalog.json, schema/**, scripts/**, .github/workflows/validate.yml]
   push:
     branches: [main]
   workflow_dispatch:
