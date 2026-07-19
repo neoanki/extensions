@@ -2,5 +2,30 @@
   "$schema": "./schema/catalog.schema.json",
   "format": "neo-anki-extension-catalog",
   "schemaVersion": 1,
-  "extensions": []
+  "extensions": [
+    {
+      "id": "org.neoanki.tts",
+      "name": "NeoAnki TTS",
+      "summary": "Generate, cache, and play provider-backed text-to-speech audio while studying in NeoAnki.",
+      "description": "Generate and cache review audio with configurable profiles, batch processing, and live playback. Supports OpenAI, ElevenLabs, Google Cloud Text-to-Speech, and Azure Speech. Prompt text is sent directly to the provider you select; API credentials stay in the operating system's secure credential storage and are not synchronized. Provider accounts and usage charges may apply.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-tts",
+      "homepage": "https://github.com/neoanki/neoanki-tts",
+      "license": "MIT",
+      "categories": ["study", "accessibility", "integration"],
+      "tags": ["text-to-speech", "audio", "language-learning", "openai", "elevenlabs", "google-cloud", "azure-speech"],
+      "release": {
+        "version": "2.0.1",
+        "publishedAt": "2026-07-19T06:19:30Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.1/org.neoanki.tts-2.0.1.neoanki-extension",
+        "sha256": "5a51a9c254483fa26217e533ec7308e9703c6075b124e46e37b7f005cb692837",
+        "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
+        "minimumNeoAnkiVersion": "0.2.0",
+        "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
+      }
+    }
+  ]
 }
