@@ -11,6 +11,20 @@ const categories = new Set(['study', 'authoring', 'import-export', 'planning', '
 const idPattern = /^[a-z0-9]+(?:[.-][a-z0-9]+)+$/
 const semverPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/
 const packagePattern = /^https:\/\/github\.com\/[^/]+\/[^/]+\/releases\/download\/[^/]+\/[^/]+\.neoanki-extension$/
+const compareVersions = (left, right) => {
+  const parse = version => { const [withPre] = version.split('+'); const [core, pre = ''] = withPre.split('-', 2); return { core: core.split('.').map(Number), pre: pre ? pre.split('.') : [] } }
+  const a = parse(left); const b = parse(right)
+  for (let index = 0; index < 3; index += 1) if (a.core[index] !== b.core[index]) return a.core[index] - b.core[index]
+  if (!a.pre.length || !b.pre.length) return a.pre.length ? -1 : b.pre.length ? 1 : 0
+  for (let index = 0; index < Math.max(a.pre.length, b.pre.length); index += 1) {
+    if (a.pre[index] === undefined || b.pre[index] === undefined) return a.pre[index] === undefined ? -1 : 1
+    if (a.pre[index] === b.pre[index]) continue
+    const an = /^\d+$/.test(a.pre[index]) ? Number(a.pre[index]) : null; const bn = /^\d+$/.test(b.pre[index]) ? Number(b.pre[index]) : null
+    if (an !== null || bn !== null) return an === null ? 1 : bn === null ? -1 : an - bn
+    return a.pre[index].localeCompare(b.pre[index])
+  }
+  return 0
+}
 const fail = message => { throw new Error(message) }
 const text = (value, name, max) => typeof value === 'string' && value.trim() && value.length <= max ? value : fail(`${name} must be non-empty text of at most ${max} characters.`)
 const uniqueStrings = (value, name, max) => Array.isArray(value) && value.length <= max && value.every(item => typeof item === 'string') && new Set(value).size === value.length ? value : fail(`${name} must be a unique string array with at most ${max} values.`)
@@ -24,6 +38,7 @@ const validateEntry = entry => {
   if (!idPattern.test(id)) fail(`${id}: id must use lowercase reverse-domain notation.`)
   text(entry.name, `${id}.name`, 80); text(entry.summary, `${id}.summary`, 160); text(entry.description, `${id}.description`, 1000); text(entry.license, `${id}.license`, 64)
   if (!entry.publisher || typeof entry.publisher !== 'object') fail(`${id}.publisher is required.`)
+  if (JSON.stringify(Object.keys(entry.publisher).sort()) !== JSON.stringify(['name', 'url'])) fail(`${id}.publisher contains missing or unknown fields.`)
   text(entry.publisher.name, `${id}.publisher.name`, 100); httpsUrl(entry.publisher.url, `${id}.publisher.url`)
   const repository = httpsUrl(entry.repository, `${id}.repository`)
   if (repository.hostname !== 'github.com' || repository.pathname.split('/').filter(Boolean).length !== 2) fail(`${id}.repository must be a GitHub repository URL.`)
@@ -39,6 +54,9 @@ const validateEntry = entry => {
   if (!semverPattern.test(release.version) || !semverPattern.test(release.minimumNeoAnkiVersion)) fail(`${id}: release versions must use semantic versioning.`)
   if (!Number.isFinite(Date.parse(release.publishedAt))) fail(`${id}.release.publishedAt must be an ISO date-time.`)
   if (!packagePattern.test(release.packageUrl)) fail(`${id}.release.packageUrl must be an immutable GitHub Release .neoanki-extension asset.`)
+  const packageRepository = new URL(release.packageUrl).pathname.split('/').filter(Boolean).slice(0, 2).join('/').toLowerCase()
+  const declaredRepository = repository.pathname.split('/').filter(Boolean).join('/').toLowerCase()
+  if (packageRepository !== declaredRepository) fail(`${id}: package release must belong to the declared source repository.`)
   if (!/^[a-f0-9]{64}$/.test(release.sha256)) fail(`${id}.release.sha256 must be a lowercase SHA-256 digest.`)
   text(release.publisherKey, `${id}.release.publisherKey`, 4096)
   const requested = uniqueStrings(release.permissions, `${id}.release.permissions`, 11)
@@ -70,7 +88,8 @@ const inspectPackage = async (entry, bytes, directory) => {
 }
 
 const raw = JSON.parse(await readFile('catalog.json', 'utf8'))
-if (raw.format !== 'neo-anki-extension-catalog' || raw.schemaVersion !== 1 || !Array.isArray(raw.extensions) || raw.extensions.length > 5000) fail('catalog.json header or extensions array is invalid.')
+if (JSON.stringify(Object.keys(raw).sort()) !== JSON.stringify(['$schema', 'extensions', 'format', 'schemaVersion'])) fail('catalog.json contains missing or unknown root fields.')
+if (raw.$schema !== './schema/catalog.schema.json' || raw.format !== 'neo-anki-extension-catalog' || raw.schemaVersion !== 1 || !Array.isArray(raw.extensions) || raw.extensions.length > 5000) fail('catalog.json header or extensions array is invalid.')
 const entries = raw.extensions.map(validateEntry)
 if (new Set(entries.map(entry => entry.id)).size !== entries.length) fail('Extension ids must be unique.')
 if (JSON.stringify(entries.map(entry => entry.id)) !== JSON.stringify(entries.map(entry => entry.id).sort())) fail('Extensions must be sorted by id.')
@@ -84,6 +103,7 @@ if (baseArg >= 0 && process.argv[baseArg + 1]) {
       const old = previous.get(entry.id); if (!old) continue
       if (old.repository !== entry.repository) fail(`${entry.id}: repository identity cannot change in an ordinary catalog update.`)
       if (old.release.publisherKey !== entry.release.publisherKey) fail(`${entry.id}: publisher key continuity check failed. Open a security issue for a reviewed key rotation.`)
+      if (compareVersions(entry.release.version, old.release.version) < 0) fail(`${entry.id}: marketplace releases cannot move backward from ${old.release.version} to ${entry.release.version}.`)
     }
   }
 }
