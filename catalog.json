@@ -4,6 +4,54 @@
   "schemaVersion": 1,
   "extensions": [
     {
+      "id": "org.neoanki.card-timer",
+      "name": "Card Timer",
+      "summary": "Use an optional target countdown during review without automatic grading.",
+      "description": "Shows a configurable target timer beside each review card. Reaching zero only announces that the target elapsed; it never reveals, grades, or reschedules a card. The extension has no content or network access, and stores only its enabled state and duration in synchronized configuration.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-card-timer",
+      "homepage": "https://github.com/neoanki/neoanki-card-timer",
+      "license": "MIT",
+      "categories": ["study", "accessibility"],
+      "tags": ["timer", "review", "pacing", "focus"],
+      "release": {
+        "version": "2.0.0",
+        "publishedAt": "2026-07-20T22:27:54Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.0.0/org.neoanki.card-timer-2.0.0.neoanki-extension",
+        "sha256": "caa31881357cbc7e04f4a5ab3a46f98f0ae444e3e9491bcb79dcdedeedbf4721",
+        "publisherKey": "MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=",
+        "minimumNeoAnkiVersion": "0.2.2",
+        "permissions": ["config:sync", "ui:settings", "ui:review"]
+      }
+    },
+    {
+      "id": "org.neoanki.insights",
+      "name": "Memory Insights",
+      "summary": "Inspect current collection workload and organization without mastery claims.",
+      "description": "Provides read-only collection metrics, deck counts, common tags, due-today context, and content-health signals in a sandboxed page. Metrics describe the current collection and do not claim to measure mastery. The extension has no write or network access.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-insights",
+      "homepage": "https://github.com/neoanki/neoanki-insights",
+      "license": "MIT",
+      "categories": ["analytics"],
+      "tags": ["insights", "analytics", "decks", "tags", "workload"],
+      "release": {
+        "version": "2.0.0",
+        "publishedAt": "2026-07-20T22:30:23Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-insights/releases/download/v2.0.0/org.neoanki.insights-2.0.0.neoanki-extension",
+        "sha256": "3f68473931d60f77ee180ddbe3965d553080186b1d1cf13b5fdcebd2c00bc536",
+        "publisherKey": "MCowBQYDK2VwAyEAEWk872RMMdql1/bWKBBp9qEiR1O1lPZkg+BnC1Xs98k=",
+        "minimumNeoAnkiVersion": "0.2.2",
+        "permissions": ["content:read", "ui:page"]
+      }
+    },
+    {
       "id": "org.neoanki.tts",
       "name": "NeoAnki TTS",
       "summary": "Generate, cache, and play provider-backed text-to-speech audio while studying in NeoAnki.",
