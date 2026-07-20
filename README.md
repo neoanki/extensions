@@ -8,7 +8,7 @@ This repository is the public, review-gated catalog used by NeoAnki apps to disc
 
 `main` is the approved marketplace. Publishers propose a signed GitHub Release package through a pull request; automation validates identity, immutable download location, SHA-256, SDK version, permissions, and signing-key continuity. Maintainer review covers ownership, provenance, privacy, permission scope, licensing, user experience, and pedagogical claims.
 
-[NeoAnki TTS 2.0.2](https://github.com/neoanki/neoanki-tts/releases/tag/v2.0.2) is the catalog's first production listing and remains the first entry. Development examples signed with test keys are not production marketplace listings.
+The catalog includes independently released first-party extensions for [Card Timer](https://github.com/neoanki/neoanki-card-timer), [Memory Insights](https://github.com/neoanki/neoanki-insights), and [NeoAnki TTS](https://github.com/neoanki/neoanki-tts). Development examples signed with test keys are not production marketplace listings.
 
 ## Trust model
 
