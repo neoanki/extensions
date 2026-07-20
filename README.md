@@ -8,7 +8,7 @@ This repository is the public, review-gated catalog used by NeoAnki apps to disc
 
 `main` is the approved marketplace. Publishers propose a signed GitHub Release package through a pull request; automation validates identity, immutable download location, SHA-256, SDK version, permissions, and signing-key continuity. Maintainer review covers ownership, provenance, privacy, permission scope, licensing, user experience, and pedagogical claims.
 
-The catalog begins empty intentionally. Development examples signed with test keys are not production marketplace listings.
+[NeoAnki TTS 2.0.2](https://github.com/neoanki/neoanki-tts/releases/tag/v2.0.2) is the catalog's first production listing and remains the first entry. Development examples signed with test keys are not production marketplace listings.
 
 ## Trust model
 
