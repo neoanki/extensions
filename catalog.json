@@ -28,6 +28,30 @@
       }
     },
     {
+      "id": "org.neoanki.image-occlusion",
+      "name": "Image Occlusion",
+      "summary": "Create one recall prompt for each region you mask on an image.",
+      "description": "Adds an accessible image-mask authoring panel and image-occlusion prompt renderer. Images stay in the local workspace; the extension has no network access. It can define prompt types and contribute an isolated panel to the authoring screen.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-image-occlusion",
+      "homepage": "https://github.com/neoanki/neoanki-image-occlusion",
+      "license": "MIT",
+      "categories": ["authoring", "study", "accessibility"],
+      "tags": ["images", "occlusion", "masks", "visual-memory"],
+      "release": {
+        "version": "2.0.0",
+        "publishedAt": "2026-07-21T05:05:11Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-image-occlusion/releases/download/v2.0.0/org.neoanki.image-occlusion-2.0.0.neoanki-extension",
+        "sha256": "731be3826c89809a0c46824a7c42b15f41e6c78095ce30089c152787da1e69e4",
+        "publisherKey": "MCowBQYDK2VwAyEAeKvFiVDTzsTiuap/saUwEHTm28CSJjpj+xekc6hwJfQ=",
+        "minimumNeoAnkiVersion": "0.3.0",
+        "permissions": ["study:prompt-types", "ui:create"]
+      }
+    },
+    {
       "id": "org.neoanki.insights",
       "name": "Memory Insights",
       "summary": "Inspect current collection workload and organization without mastery claims.",
@@ -52,6 +76,102 @@
       }
     },
     {
+      "id": "org.neoanki.interoperability",
+      "name": "Anki & CSV Interoperability",
+      "summary": "Preflight, import, and export Anki packages and CSV through rollback-safe migrations.",
+      "description": "Inspects Anki .apkg and .colpkg files or CSV before committing, reports migration fidelity, and exports the current workspace to Anki or CSV. Imports use Neo Anki's migration broker, which creates a recovery checkpoint before any accepted commit. Files and workspace content are processed locally with no network access.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-interoperability",
+      "homepage": "https://github.com/neoanki/neoanki-interoperability",
+      "license": "MIT",
+      "categories": ["import-export", "integration"],
+      "tags": ["anki", "apkg", "colpkg", "csv", "migration", "backup"],
+      "release": {
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T05:19:43Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.1/org.neoanki.interoperability-2.0.1.neoanki-extension",
+        "sha256": "a1d0b5bee172106516489f6c0e8b703d2f84e97e28db30ff116afdc581a1e03b",
+        "publisherKey": "MCowBQYDK2VwAyEAbdbz39ZGfPZS9/Ix+JV2ybW4qaHZZT32rk4MBvaUtxI=",
+        "minimumNeoAnkiVersion": "0.3.0",
+        "permissions": ["content:migrate", "ui:migration"]
+      }
+    },
+    {
+      "id": "org.neoanki.prompt-types",
+      "name": "Prompt Types",
+      "summary": "Add reverse, cloze, typed-answer, and audio study prompts.",
+      "description": "Provides optional prompt creation, rendering, and typed-answer comparison for reverse, cloze, typed-answer, and audio cards. It receives only the knowledge item and card currently being created or reviewed, and has no content-wide, configuration, migration, or network access.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-prompt-types",
+      "homepage": "https://github.com/neoanki/neoanki-prompt-types",
+      "license": "MIT",
+      "categories": ["study", "authoring", "accessibility"],
+      "tags": ["reverse", "cloze", "typed-answer", "audio", "prompts"],
+      "release": {
+        "version": "2.0.0",
+        "publishedAt": "2026-07-21T05:05:10Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-prompt-types/releases/download/v2.0.0/org.neoanki.prompt-types-2.0.0.neoanki-extension",
+        "sha256": "6d8be4cbc652b74debb065303dc63cccb84e725759748c9396f3acbab2e9f57d",
+        "publisherKey": "MCowBQYDK2VwAyEALub/vrTECS4VWGWkLZ8oHn4DFpsvOddPS7XOxSFr6wg=",
+        "minimumNeoAnkiVersion": "0.3.0",
+        "permissions": ["study:prompt-types"]
+      }
+    },
+    {
+      "id": "org.neoanki.recovery-policies",
+      "name": "Recovery Policies",
+      "summary": "Choose oldest-overdue or quick-wins ordering when a review backlog grows.",
+      "description": "Adds two bounded queue-scoring strategies: oldest overdue first and quick wins first. It receives only scoped card scheduling candidates during planning, cannot write content or settings, and has no network access.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-recovery-policies",
+      "homepage": "https://github.com/neoanki/neoanki-recovery-policies",
+      "license": "MIT",
+      "categories": ["study", "planning"],
+      "tags": ["backlog", "queue", "overdue", "recovery", "planning"],
+      "release": {
+        "version": "2.0.0",
+        "publishedAt": "2026-07-21T05:05:13Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-recovery-policies/releases/download/v2.0.0/org.neoanki.recovery-policies-2.0.0.neoanki-extension",
+        "sha256": "ff80d6fe1d278209e1b07352f3cfd3b4abfce25b32632611792b44f56292fecb",
+        "publisherKey": "MCowBQYDK2VwAyEAIxKXBNaqQ9JF6qoyCO21jPjrnAlTd+bMTCrnhLUZUX8=",
+        "minimumNeoAnkiVersion": "0.3.0",
+        "permissions": ["study:queue-policies"]
+      }
+    },
+    {
+      "id": "org.neoanki.shared-packs",
+      "name": "Shared Packs",
+      "summary": "Install versioned learning packs as extension-owned content with provenance.",
+      "description": "Validates Neo Anki pack files, installs their notes and provenance atomically, and applies later versions with field-level three-way merges. Conflicting local edits and scheduling-sensitive changes are preserved for explicit review; the extension has no network access and cannot modify content outside its reserved namespace.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-shared-packs",
+      "homepage": "https://github.com/neoanki/neoanki-shared-packs",
+      "license": "MIT",
+      "categories": ["authoring", "integration"],
+      "tags": ["packs", "sharing", "provenance", "content", "install"],
+      "release": {
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T05:14:54Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.1/org.neoanki.shared-packs-2.0.1.neoanki-extension",
+        "sha256": "b26de8cf5dcf7926ad8d0b35c4873e5ebb76b645ebd4cf1fee594c7471dec9dc",
+        "publisherKey": "MCowBQYDK2VwAyEAvMftTCbTuDO3DGup/PC3oSYpKWo8pk+/OEBekZ7qb3Q=",
+        "minimumNeoAnkiVersion": "0.3.0",
+        "permissions": ["content:migrate", "content:patch-own", "ui:workspace"]
+      }
+    },
+    {
       "id": "org.neoanki.tts",
       "name": "NeoAnki TTS",
       "summary": "Generate, cache, and play provider-backed text-to-speech audio while studying in NeoAnki.",
@@ -73,6 +193,30 @@
         "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
         "minimumNeoAnkiVersion": "0.2.0",
         "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
+      }
+    },
+    {
+      "id": "org.neoanki.workspace",
+      "name": "Goals & Saved Views",
+      "summary": "Add learning goals, bounded planning signals, and reusable Library searches.",
+      "description": "Adds an isolated workspace panel for learning goals and saved Library views. Goal matches contribute bounded priority signals to planning. Goals and views are kept in extension-owned synchronized configuration; the extension cannot write learning content or access the network.",
+      "publisher": {
+        "name": "NeoAnki contributors",
+        "url": "https://github.com/neoanki"
+      },
+      "repository": "https://github.com/neoanki/neoanki-workspace",
+      "homepage": "https://github.com/neoanki/neoanki-workspace",
+      "license": "MIT",
+      "categories": ["planning", "study"],
+      "tags": ["goals", "saved-views", "priorities", "library", "planning"],
+      "release": {
+        "version": "2.0.0",
+        "publishedAt": "2026-07-21T05:05:13Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-workspace/releases/download/v2.0.0/org.neoanki.workspace-2.0.0.neoanki-extension",
+        "sha256": "0419020e884c096414d62bf51bcb5c7bb10c941b5863cbffcf950012ba984c01",
+        "publisherKey": "MCowBQYDK2VwAyEA/2OOiDcSDXwrflv6BnyhUHmMz0zAUU+UdxcesXIMqX0=",
+        "minimumNeoAnkiVersion": "0.3.0",
+        "permissions": ["study:signals", "config:sync", "ui:workspace"]
       }
     }
   ]

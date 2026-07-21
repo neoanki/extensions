@@ -5,8 +5,8 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
-const MAX_PACKAGE_BYTES = 5 * 1024 * 1024
-const permissions = new Set(['study:read', 'study:signals', 'content:read', 'content:patch-own', 'media:create', 'network:fetch', 'secrets:device', 'config:sync', 'ui:settings', 'ui:review', 'ui:page'])
+const MAX_PACKAGE_BYTES = 12 * 1024 * 1024
+const permissions = new Set(['study:read', 'study:signals', 'study:prompt-types', 'study:queue-policies', 'content:read', 'content:patch-own', 'content:migrate', 'media:create', 'network:fetch', 'secrets:device', 'config:sync', 'ui:settings', 'ui:review', 'ui:page', 'ui:create', 'ui:workspace', 'ui:migration'])
 const categories = new Set(['study', 'authoring', 'import-export', 'planning', 'analytics', 'accessibility', 'integration', 'appearance'])
 const idPattern = /^[a-z0-9]+(?:[.-][a-z0-9]+)+$/
 const semverPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/
@@ -59,7 +59,7 @@ const validateEntry = entry => {
   if (packageRepository !== declaredRepository) fail(`${id}: package release must belong to the declared source repository.`)
   if (!/^[a-f0-9]{64}$/.test(release.sha256)) fail(`${id}.release.sha256 must be a lowercase SHA-256 digest.`)
   text(release.publisherKey, `${id}.release.publisherKey`, 4096)
-  const requested = uniqueStrings(release.permissions, `${id}.release.permissions`, 11)
+  const requested = uniqueStrings(release.permissions, `${id}.release.permissions`, 17)
   if (requested.some(value => !permissions.has(value))) fail(`${id}.release.permissions contains an unsupported permission.`)
   return entry
 }
@@ -68,9 +68,9 @@ const download = async entry => {
   const response = await fetch(entry.release.packageUrl, { redirect: 'follow', signal: AbortSignal.timeout(60_000), headers: { 'user-agent': 'neoanki-marketplace-validator' } })
   if (!response.ok) fail(`${entry.id}: package download returned ${response.status}.`)
   const length = Number(response.headers.get('content-length') || 0)
-  if (length > MAX_PACKAGE_BYTES) fail(`${entry.id}: package is larger than 5 MB.`)
+  if (length > MAX_PACKAGE_BYTES) fail(`${entry.id}: package is larger than 12 MB.`)
   const chunks = []; let total = 0
-  for await (const chunk of response.body) { total += chunk.byteLength; if (total > MAX_PACKAGE_BYTES) fail(`${entry.id}: package is larger than 5 MB.`); chunks.push(chunk) }
+  for await (const chunk of response.body) { total += chunk.byteLength; if (total > MAX_PACKAGE_BYTES) fail(`${entry.id}: package is larger than 12 MB.`); chunks.push(chunk) }
   return Buffer.concat(chunks)
 }
 
