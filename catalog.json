@@ -90,10 +90,10 @@
       "categories": ["import-export", "integration"],
       "tags": ["anki", "apkg", "colpkg", "csv", "migration", "backup"],
       "release": {
-        "version": "2.0.5",
-        "publishedAt": "2026-07-21T10:32:50Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.5/org.neoanki.interoperability-2.0.5.neoanki-extension",
-        "sha256": "c2a8bc41e9a353781b4d82e967f2b51259593ed92d476e7440acd55dd27e1e15",
+        "version": "2.0.6",
+        "publishedAt": "2026-07-21T14:28:17Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.6/org.neoanki.interoperability-2.0.6.neoanki-extension",
+        "sha256": "9a026097e0f6c993070191bf86b456cc1e9755be363b76d948ad2854ef0cbf88",
         "publisherKey": "MCowBQYDK2VwAyEAbdbz39ZGfPZS9/Ix+JV2ybW4qaHZZT32rk4MBvaUtxI=",
         "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["content:migrate", "files:save", "ui:migration"]
@@ -186,10 +186,10 @@
       "categories": ["study", "accessibility", "integration"],
       "tags": ["text-to-speech", "audio", "language-learning", "openai", "elevenlabs", "google-cloud", "azure-speech"],
       "release": {
-        "version": "2.0.4",
-        "publishedAt": "2026-07-21T10:43:08Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.4/org.neoanki.tts-2.0.4.neoanki-extension",
-        "sha256": "a85741540d99ac285d6b9c6b227f232235a4737386cdac66e2cb44812c24fef3",
+        "version": "2.0.5",
+        "publishedAt": "2026-07-21T14:38:23Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.5/org.neoanki.tts-2.0.5.neoanki-extension",
+        "sha256": "81a0c5dc4ddb9d39cd6fa7adeb181c62cb267ffe4f9f27e2c85a3c9246af5dae",
         "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
         "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
