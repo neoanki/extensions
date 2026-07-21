@@ -90,10 +90,10 @@
       "categories": ["import-export", "integration"],
       "tags": ["anki", "apkg", "colpkg", "csv", "migration", "backup"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-21T05:05:14Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.0/org.neoanki.interoperability-2.0.0.neoanki-extension",
-        "sha256": "bbeb4bf4354b91a5e20307b6e3817fd073144f371d8191520a16d70dbffbb7c5",
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T05:19:43Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.1/org.neoanki.interoperability-2.0.1.neoanki-extension",
+        "sha256": "a1d0b5bee172106516489f6c0e8b703d2f84e97e28db30ff116afdc581a1e03b",
         "publisherKey": "MCowBQYDK2VwAyEAbdbz39ZGfPZS9/Ix+JV2ybW4qaHZZT32rk4MBvaUtxI=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["content:migrate", "ui:migration"]
@@ -151,7 +151,7 @@
       "id": "org.neoanki.shared-packs",
       "name": "Shared Packs",
       "summary": "Install versioned learning packs as extension-owned content with provenance.",
-      "description": "Validates Neo Anki pack files and installs their notes, cards, schema, and provenance in one atomic extension-owned patch. Installed-pack metadata is synchronized, while the extension has no network access and cannot modify content outside its reserved namespace.",
+      "description": "Validates Neo Anki pack files, installs their notes and provenance atomically, and applies later versions with field-level three-way merges. Conflicting local edits and scheduling-sensitive changes are preserved for explicit review; the extension has no network access and cannot modify content outside its reserved namespace.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -162,13 +162,13 @@
       "categories": ["authoring", "integration"],
       "tags": ["packs", "sharing", "provenance", "content", "install"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-21T05:05:16Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.0/org.neoanki.shared-packs-2.0.0.neoanki-extension",
-        "sha256": "75b5fb104dfa2571bd2d74a2497ccb04effc4ecb06d62029ee3a9b4554475103",
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T05:14:54Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.1/org.neoanki.shared-packs-2.0.1.neoanki-extension",
+        "sha256": "b26de8cf5dcf7926ad8d0b35c4873e5ebb76b645ebd4cf1fee594c7471dec9dc",
         "publisherKey": "MCowBQYDK2VwAyEAvMftTCbTuDO3DGup/PC3oSYpKWo8pk+/OEBekZ7qb3Q=",
         "minimumNeoAnkiVersion": "0.3.0",
-        "permissions": ["content:migrate", "content:patch-own", "config:sync", "ui:workspace"]
+        "permissions": ["content:migrate", "content:patch-own", "ui:workspace"]
       }
     },
     {
