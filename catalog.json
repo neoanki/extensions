@@ -18,12 +18,12 @@
       "categories": ["study", "accessibility"],
       "tags": ["timer", "review", "pacing", "focus"],
       "release": {
-        "version": "2.0.2",
-        "publishedAt": "2026-07-21T06:56:48Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.0.2/org.neoanki.card-timer-2.0.2.neoanki-extension",
-        "sha256": "c31eea2c43d0e89640992237d08ade0a7f7636d7ca536679cdfa8145b985c8c8",
+        "version": "2.0.3",
+        "publishedAt": "2026-07-21T10:32:47Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.0.3/org.neoanki.card-timer-2.0.3.neoanki-extension",
+        "sha256": "46777821d7e8cd919c791aee7b1902761c32473a439b4386edcd42b004c6cc86",
         "publisherKey": "MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=",
-        "minimumNeoAnkiVersion": "0.2.2",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["config:sync", "ui:settings", "ui:review"]
       }
     },
@@ -42,12 +42,12 @@
       "categories": ["authoring", "study", "accessibility"],
       "tags": ["images", "occlusion", "masks", "visual-memory"],
       "release": {
-        "version": "2.0.1",
-        "publishedAt": "2026-07-21T06:51:38Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-image-occlusion/releases/download/v2.0.1/org.neoanki.image-occlusion-2.0.1.neoanki-extension",
-        "sha256": "eb5744071781e3d0b7f18af037df872de7396ea703d96ad64b0b19f6cd5c430f",
+        "version": "2.0.2",
+        "publishedAt": "2026-07-21T10:32:42Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-image-occlusion/releases/download/v2.0.2/org.neoanki.image-occlusion-2.0.2.neoanki-extension",
+        "sha256": "72a64bc51b6c87b0d0950f3f05f54822feddb462d60121d3782ded63a10fda9b",
         "publisherKey": "MCowBQYDK2VwAyEAeKvFiVDTzsTiuap/saUwEHTm28CSJjpj+xekc6hwJfQ=",
-        "minimumNeoAnkiVersion": "0.3.0",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["study:prompt-types", "ui:create"]
       }
     },
@@ -66,12 +66,12 @@
       "categories": ["analytics"],
       "tags": ["insights", "analytics", "decks", "tags", "workload"],
       "release": {
-        "version": "2.0.1",
-        "publishedAt": "2026-07-21T06:51:25Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-insights/releases/download/v2.0.1/org.neoanki.insights-2.0.1.neoanki-extension",
-        "sha256": "0afda2550ee9e324e0f5a42626d6f8fc43b0d2756b209c692f09ecd251235384",
+        "version": "2.0.2",
+        "publishedAt": "2026-07-21T10:32:42Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-insights/releases/download/v2.0.2/org.neoanki.insights-2.0.2.neoanki-extension",
+        "sha256": "1b60a4893e4b68b1522fde0d69fb15c6842f546b686e153a612fc2c0ea289471",
         "publisherKey": "MCowBQYDK2VwAyEAEWk872RMMdql1/bWKBBp9qEiR1O1lPZkg+BnC1Xs98k=",
-        "minimumNeoAnkiVersion": "0.2.2",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["content:read", "ui:page"]
       }
     },
@@ -90,13 +90,13 @@
       "categories": ["import-export", "integration"],
       "tags": ["anki", "apkg", "colpkg", "csv", "migration", "backup"],
       "release": {
-        "version": "2.0.4",
-        "publishedAt": "2026-07-21T06:51:35Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.4/org.neoanki.interoperability-2.0.4.neoanki-extension",
-        "sha256": "bc58b03f993df88cab0d8ccbbbf495ff35185b73e1452d789e629d73b18096b8",
+        "version": "2.0.5",
+        "publishedAt": "2026-07-21T10:32:50Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.5/org.neoanki.interoperability-2.0.5.neoanki-extension",
+        "sha256": "c2a8bc41e9a353781b4d82e967f2b51259593ed92d476e7440acd55dd27e1e15",
         "publisherKey": "MCowBQYDK2VwAyEAbdbz39ZGfPZS9/Ix+JV2ybW4qaHZZT32rk4MBvaUtxI=",
-        "minimumNeoAnkiVersion": "0.3.0",
-        "permissions": ["content:migrate", "ui:migration"]
+        "minimumNeoAnkiVersion": "0.4.0",
+        "permissions": ["content:migrate", "files:save", "ui:migration"]
       }
     },
     {
@@ -114,12 +114,12 @@
       "categories": ["study", "authoring", "accessibility"],
       "tags": ["reverse", "cloze", "typed-answer", "audio", "prompts"],
       "release": {
-        "version": "2.0.2",
-        "publishedAt": "2026-07-21T07:00:43Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-prompt-types/releases/download/v2.0.2/org.neoanki.prompt-types-2.0.2.neoanki-extension",
-        "sha256": "826169a0b9ff3b90545c7ef0b18cc71e8d94229f5561fdf75f708a88861e32d7",
+        "version": "2.0.3",
+        "publishedAt": "2026-07-21T10:32:46Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-prompt-types/releases/download/v2.0.3/org.neoanki.prompt-types-2.0.3.neoanki-extension",
+        "sha256": "462fc2a3bd1afac036a854882c9317a719724309ea021fef54952208658a65d2",
         "publisherKey": "MCowBQYDK2VwAyEALub/vrTECS4VWGWkLZ8oHn4DFpsvOddPS7XOxSFr6wg=",
-        "minimumNeoAnkiVersion": "0.3.0",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["study:prompt-types"]
       }
     },
@@ -162,12 +162,12 @@
       "categories": ["authoring", "integration"],
       "tags": ["packs", "sharing", "provenance", "content", "install"],
       "release": {
-        "version": "2.0.3",
-        "publishedAt": "2026-07-21T07:00:47Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.3/org.neoanki.shared-packs-2.0.3.neoanki-extension",
-        "sha256": "54430d6af81f99b2e94e0f34e072b98106fa8d8a713da539218cd4a6574dd3ba",
+        "version": "2.0.4",
+        "publishedAt": "2026-07-21T10:32:52Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.4/org.neoanki.shared-packs-2.0.4.neoanki-extension",
+        "sha256": "8ba04aa6c6166725b987cd2473f86295e55107fe69abda385ede598da7b24561",
         "publisherKey": "MCowBQYDK2VwAyEAvMftTCbTuDO3DGup/PC3oSYpKWo8pk+/OEBekZ7qb3Q=",
-        "minimumNeoAnkiVersion": "0.3.0",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["content:migrate", "content:patch-own", "ui:workspace"]
       }
     },
@@ -186,12 +186,12 @@
       "categories": ["study", "accessibility", "integration"],
       "tags": ["text-to-speech", "audio", "language-learning", "openai", "elevenlabs", "google-cloud", "azure-speech"],
       "release": {
-        "version": "2.0.3",
-        "publishedAt": "2026-07-21T07:12:36Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.3/org.neoanki.tts-2.0.3.neoanki-extension",
-        "sha256": "a260c96b3e376459c4dec8a7f9fbba68853ed1027b828d9ea8f897fa50d09d9a",
+        "version": "2.0.4",
+        "publishedAt": "2026-07-21T10:43:08Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.4/org.neoanki.tts-2.0.4.neoanki-extension",
+        "sha256": "a85741540d99ac285d6b9c6b227f232235a4737386cdac66e2cb44812c24fef3",
         "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
-        "minimumNeoAnkiVersion": "0.2.0",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
       }
     },
@@ -210,12 +210,12 @@
       "categories": ["planning", "study"],
       "tags": ["goals", "saved-views", "priorities", "library", "planning"],
       "release": {
-        "version": "2.0.1",
-        "publishedAt": "2026-07-21T06:51:29Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-workspace/releases/download/v2.0.1/org.neoanki.workspace-2.0.1.neoanki-extension",
-        "sha256": "c6a0cd3b6bfa4357b0506df52b5667de3c94f94a547954455c4283e65ed60a36",
+        "version": "2.0.2",
+        "publishedAt": "2026-07-21T10:32:51Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-workspace/releases/download/v2.0.2/org.neoanki.workspace-2.0.2.neoanki-extension",
+        "sha256": "4cb854d5a17903a71b5f69e9c71edfa45a5a44958eefedf71cc61604da3be3f0",
         "publisherKey": "MCowBQYDK2VwAyEA/2OOiDcSDXwrflv6BnyhUHmMz0zAUU+UdxcesXIMqX0=",
-        "minimumNeoAnkiVersion": "0.3.0",
+        "minimumNeoAnkiVersion": "0.4.0",
         "permissions": ["study:signals", "config:sync", "ui:workspace"]
       }
     }
