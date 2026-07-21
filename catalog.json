@@ -186,12 +186,12 @@
       "categories": ["study", "accessibility", "integration"],
       "tags": ["text-to-speech", "audio", "language-learning", "openai", "elevenlabs", "google-cloud", "azure-speech"],
       "release": {
-        "version": "2.0.5",
-        "publishedAt": "2026-07-21T14:38:23Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.5/org.neoanki.tts-2.0.5.neoanki-extension",
-        "sha256": "81a0c5dc4ddb9d39cd6fa7adeb181c62cb267ffe4f9f27e2c85a3c9246af5dae",
+        "version": "2.0.6",
+        "publishedAt": "2026-07-21T15:49:39Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.6/org.neoanki.tts-2.0.6.neoanki-extension",
+        "sha256": "2ba022e22eee199c96f4fb3eeca5e22882a551fd151de75afd624c4479851556",
         "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
-        "minimumNeoAnkiVersion": "0.4.0",
+        "minimumNeoAnkiVersion": "0.4.2",
         "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
       }
     },
