@@ -90,10 +90,10 @@
       "categories": ["import-export", "integration"],
       "tags": ["anki", "apkg", "colpkg", "csv", "migration", "backup"],
       "release": {
-        "version": "2.0.1",
-        "publishedAt": "2026-07-21T05:19:43Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.1/org.neoanki.interoperability-2.0.1.neoanki-extension",
-        "sha256": "a1d0b5bee172106516489f6c0e8b703d2f84e97e28db30ff116afdc581a1e03b",
+        "version": "2.0.3",
+        "publishedAt": "2026-07-21T05:47:06Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.3/org.neoanki.interoperability-2.0.3.neoanki-extension",
+        "sha256": "8981776fa0f12e73646a4abe98ad3c5629f5efa41d5d5630081b0246f87351b0",
         "publisherKey": "MCowBQYDK2VwAyEAbdbz39ZGfPZS9/Ix+JV2ybW4qaHZZT32rk4MBvaUtxI=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["content:migrate", "ui:migration"]
