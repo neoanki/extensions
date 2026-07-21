@@ -6,7 +6,7 @@ import { join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
 const MAX_PACKAGE_BYTES = 12 * 1024 * 1024
-const permissions = new Set(['study:read', 'study:signals', 'study:prompt-types', 'study:queue-policies', 'content:read', 'content:patch-own', 'content:migrate', 'media:create', 'network:fetch', 'secrets:device', 'config:sync', 'files:save', 'ui:open-external', 'ui:settings', 'ui:review', 'ui:page', 'ui:create', 'ui:workspace', 'ui:migration'])
+const permissions = new Set(['study:read', 'study:signals', 'study:prompt-types', 'study:queue-policies', 'content:read', 'content:patch-own', 'content:migrate', 'media:create', 'network:fetch', 'secrets:device', 'config:sync', 'files:save', 'ui:open-external', 'ui:review', 'ui:page', 'ui:create', 'ui:workspace', 'ui:migration'])
 const categories = new Set(['study', 'authoring', 'import-export', 'planning', 'analytics', 'accessibility', 'integration', 'appearance'])
 const idPattern = /^[a-z0-9]+(?:[.-][a-z0-9]+)+$/
 const semverPattern = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$/
@@ -59,7 +59,7 @@ const validateEntry = entry => {
   if (packageRepository !== declaredRepository) fail(`${id}: package release must belong to the declared source repository.`)
   if (!/^[a-f0-9]{64}$/.test(release.sha256)) fail(`${id}.release.sha256 must be a lowercase SHA-256 digest.`)
   text(release.publisherKey, `${id}.release.publisherKey`, 4096)
-  const requested = uniqueStrings(release.permissions, `${id}.release.permissions`, 19)
+  const requested = uniqueStrings(release.permissions, `${id}.release.permissions`, 18)
   if (requested.some(value => !permissions.has(value))) fail(`${id}.release.permissions contains an unsupported permission.`)
   return entry
 }

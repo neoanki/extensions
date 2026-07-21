@@ -46,7 +46,7 @@
             "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
             "publisherKey": { "type": "string", "minLength": 40, "maxLength": 4096 },
             "minimumNeoAnkiVersion": { "$ref": "#/$defs/semver" },
-            "permissions": { "type": "array", "maxItems": 19, "uniqueItems": true, "items": { "enum": ["study:read", "study:signals", "study:prompt-types", "study:queue-policies", "content:read", "content:patch-own", "content:migrate", "media:create", "network:fetch", "secrets:device", "config:sync", "files:save", "ui:open-external", "ui:settings", "ui:review", "ui:page", "ui:create", "ui:workspace", "ui:migration"] } }
+            "permissions": { "type": "array", "maxItems": 18, "uniqueItems": true, "items": { "enum": ["study:read", "study:signals", "study:prompt-types", "study:queue-policies", "content:read", "content:patch-own", "content:migrate", "media:create", "network:fetch", "secrets:device", "config:sync", "files:save", "ui:open-external", "ui:review", "ui:page", "ui:create", "ui:workspace", "ui:migration"] } }
           }
         }
       }

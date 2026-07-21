@@ -18,13 +18,13 @@
       "categories": ["study", "accessibility"],
       "tags": ["timer", "review", "pacing", "focus"],
       "release": {
-        "version": "2.0.3",
-        "publishedAt": "2026-07-21T10:32:47Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.0.3/org.neoanki.card-timer-2.0.3.neoanki-extension",
-        "sha256": "46777821d7e8cd919c791aee7b1902761c32473a439b4386edcd42b004c6cc86",
+        "version": "2.1.0",
+        "publishedAt": "2026-07-21T22:07:22Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.1.0/org.neoanki.card-timer-2.1.0.neoanki-extension",
+        "sha256": "8d92558f8341969d49f9af2660808a4211d652061e43f958a15aae63dac56a8b",
         "publisherKey": "MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=",
-        "minimumNeoAnkiVersion": "0.4.0",
-        "permissions": ["config:sync", "ui:settings", "ui:review"]
+        "minimumNeoAnkiVersion": "0.5.0",
+        "permissions": ["config:sync", "ui:review"]
       }
     },
     {
@@ -186,13 +186,13 @@
       "categories": ["study", "accessibility", "integration"],
       "tags": ["text-to-speech", "audio", "language-learning", "openai", "elevenlabs", "google-cloud", "azure-speech"],
       "release": {
-        "version": "2.0.6",
-        "publishedAt": "2026-07-21T15:49:39Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.6/org.neoanki.tts-2.0.6.neoanki-extension",
-        "sha256": "2ba022e22eee199c96f4fb3eeca5e22882a551fd151de75afd624c4479851556",
+        "version": "2.1.0",
+        "publishedAt": "2026-07-21T22:53:45Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.1.0/org.neoanki.tts-2.1.0.neoanki-extension",
+        "sha256": "9b43aa374ce7aea1edb9096dec33adf0f2760cdadcd059ef6cbec98f055b7435",
         "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
-        "minimumNeoAnkiVersion": "0.4.2",
-        "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
+        "minimumNeoAnkiVersion": "0.5.0",
+        "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:page", "ui:review"]
       }
     },
     {
