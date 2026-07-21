@@ -6,8 +6,8 @@
     {
       "id": "org.neoanki.card-timer",
       "name": "Card Timer",
-      "summary": "Use an optional target countdown during review without automatic grading.",
-      "description": "Shows a configurable target timer beside each review card. Reaching zero only announces that the target elapsed; it never reveals, grades, or reschedules a card. The extension has no content or network access, and stores only its enabled state and duration in synchronized configuration.",
+      "summary": "Show a countdown target beside each review card to help pace study sessions.",
+      "description": "Choose a target from 5 seconds to 5 minutes and see the remaining time while you study. When time runs out, the card stays open so you can reveal the answer and grade it when you are ready. Card Timer does not read notes or connect to the internet.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -18,10 +18,10 @@
       "categories": ["study", "accessibility"],
       "tags": ["timer", "review", "pacing", "focus"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-20T22:27:54Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.0.0/org.neoanki.card-timer-2.0.0.neoanki-extension",
-        "sha256": "caa31881357cbc7e04f4a5ab3a46f98f0ae444e3e9491bcb79dcdedeedbf4721",
+        "version": "2.0.2",
+        "publishedAt": "2026-07-21T06:56:48Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-card-timer/releases/download/v2.0.2/org.neoanki.card-timer-2.0.2.neoanki-extension",
+        "sha256": "c31eea2c43d0e89640992237d08ade0a7f7636d7ca536679cdfa8145b985c8c8",
         "publisherKey": "MCowBQYDK2VwAyEADXRs0EgH8lw6h36O6fHOwU1JaXIsKnswhU2GMnZyNoA=",
         "minimumNeoAnkiVersion": "0.2.2",
         "permissions": ["config:sync", "ui:settings", "ui:review"]
@@ -30,8 +30,8 @@
     {
       "id": "org.neoanki.image-occlusion",
       "name": "Image Occlusion",
-      "summary": "Create one recall prompt for each region you mask on an image.",
-      "description": "Adds an accessible image-mask authoring panel and image-occlusion prompt renderer. Images stay in the local workspace; the extension has no network access. It can define prompt types and contribute an isolated panel to the authoring screen.",
+      "summary": "Turn an image into recall cards by hiding the regions you want to remember.",
+      "description": "Upload a diagram, map, anatomy image, or other labeled picture and draw masks over the details you want to recall. Image Occlusion creates one card per hidden region and includes keyboard controls plus image descriptions for accessible authoring. Images stay local and are never sent over the internet.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -42,10 +42,10 @@
       "categories": ["authoring", "study", "accessibility"],
       "tags": ["images", "occlusion", "masks", "visual-memory"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-21T05:05:11Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-image-occlusion/releases/download/v2.0.0/org.neoanki.image-occlusion-2.0.0.neoanki-extension",
-        "sha256": "731be3826c89809a0c46824a7c42b15f41e6c78095ce30089c152787da1e69e4",
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T06:51:38Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-image-occlusion/releases/download/v2.0.1/org.neoanki.image-occlusion-2.0.1.neoanki-extension",
+        "sha256": "eb5744071781e3d0b7f18af037df872de7396ea703d96ad64b0b19f6cd5c430f",
         "publisherKey": "MCowBQYDK2VwAyEAeKvFiVDTzsTiuap/saUwEHTm28CSJjpj+xekc6hwJfQ=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["study:prompt-types", "ui:create"]
@@ -53,9 +53,9 @@
     },
     {
       "id": "org.neoanki.insights",
-      "name": "Memory Insights",
-      "summary": "Inspect current collection workload and organization without mastery claims.",
-      "description": "Provides read-only collection metrics, deck counts, common tags, due-today context, and content-health signals in a sandboxed page. Metrics describe the current collection and do not claim to measure mastery. The extension has no write or network access.",
+      "name": "Collection Insights",
+      "summary": "See due cards, deck sizes, common tags, and notes that need attention.",
+      "description": "Get a quick overview of total notes and cards, today's workload, deck sizes, frequently used tags, empty prompts, empty answers, and untagged notes. Collection Insights reports facts about the current collection; it does not estimate mastery. It cannot edit your collection or connect to the internet.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -66,10 +66,10 @@
       "categories": ["analytics"],
       "tags": ["insights", "analytics", "decks", "tags", "workload"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-20T22:30:23Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-insights/releases/download/v2.0.0/org.neoanki.insights-2.0.0.neoanki-extension",
-        "sha256": "3f68473931d60f77ee180ddbe3965d553080186b1d1cf13b5fdcebd2c00bc536",
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T06:51:25Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-insights/releases/download/v2.0.1/org.neoanki.insights-2.0.1.neoanki-extension",
+        "sha256": "0afda2550ee9e324e0f5a42626d6f8fc43b0d2756b209c692f09ecd251235384",
         "publisherKey": "MCowBQYDK2VwAyEAEWk872RMMdql1/bWKBBp9qEiR1O1lPZkg+BnC1Xs98k=",
         "minimumNeoAnkiVersion": "0.2.2",
         "permissions": ["content:read", "ui:page"]
@@ -77,9 +77,9 @@
     },
     {
       "id": "org.neoanki.interoperability",
-      "name": "Anki & CSV Interoperability",
-      "summary": "Preflight, import, and export Anki packages and CSV through rollback-safe migrations.",
-      "description": "Inspects Anki .apkg and .colpkg files or CSV before committing, reports migration fidelity, and exports the current workspace to Anki or CSV. Imports use Neo Anki's migration broker, which creates a recovery checkpoint before any accepted commit. Files and workspace content are processed locally with no network access.",
+      "name": "Anki & CSV Import/Export",
+      "summary": "Preview, import, and export Anki packages and CSV files.",
+      "description": "Move study material between Neo Anki, Anki, and spreadsheets. Preview notes, cards, media, warnings, and compatibility details before importing an .apkg, .colpkg, or CSV file. Export the current collection in the same formats. Every import creates a rollback checkpoint, and all files are processed locally.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -90,10 +90,10 @@
       "categories": ["import-export", "integration"],
       "tags": ["anki", "apkg", "colpkg", "csv", "migration", "backup"],
       "release": {
-        "version": "2.0.3",
-        "publishedAt": "2026-07-21T05:47:06Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.3/org.neoanki.interoperability-2.0.3.neoanki-extension",
-        "sha256": "8981776fa0f12e73646a4abe98ad3c5629f5efa41d5d5630081b0246f87351b0",
+        "version": "2.0.4",
+        "publishedAt": "2026-07-21T06:51:35Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-interoperability/releases/download/v2.0.4/org.neoanki.interoperability-2.0.4.neoanki-extension",
+        "sha256": "bc58b03f993df88cab0d8ccbbbf495ff35185b73e1452d789e629d73b18096b8",
         "publisherKey": "MCowBQYDK2VwAyEAbdbz39ZGfPZS9/Ix+JV2ybW4qaHZZT32rk4MBvaUtxI=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["content:migrate", "ui:migration"]
@@ -101,9 +101,9 @@
     },
     {
       "id": "org.neoanki.prompt-types",
-      "name": "Prompt Types",
-      "summary": "Add reverse, cloze, typed-answer, and audio study prompts.",
-      "description": "Provides optional prompt creation, rendering, and typed-answer comparison for reverse, cloze, typed-answer, and audio cards. It receives only the knowledge item and card currently being created or reviewed, and has no content-wide, configuration, migration, or network access.",
+      "name": "More Card Types",
+      "summary": "Create reverse, fill-in-the-blank, typed-answer, and audio-first cards.",
+      "description": "Add four ways to study beyond a basic front and back: reverse cards, fill-in-the-blank cloze cards, typed answers with comparison feedback, and audio-first prompts. More Card Types sees only the note and card currently being created or studied and cannot connect to the internet.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -114,10 +114,10 @@
       "categories": ["study", "authoring", "accessibility"],
       "tags": ["reverse", "cloze", "typed-answer", "audio", "prompts"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-21T05:05:10Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-prompt-types/releases/download/v2.0.0/org.neoanki.prompt-types-2.0.0.neoanki-extension",
-        "sha256": "6d8be4cbc652b74debb065303dc63cccb84e725759748c9396f3acbab2e9f57d",
+        "version": "2.0.2",
+        "publishedAt": "2026-07-21T07:00:43Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-prompt-types/releases/download/v2.0.2/org.neoanki.prompt-types-2.0.2.neoanki-extension",
+        "sha256": "826169a0b9ff3b90545c7ef0b18cc71e8d94229f5561fdf75f708a88861e32d7",
         "publisherKey": "MCowBQYDK2VwAyEALub/vrTECS4VWGWkLZ8oHn4DFpsvOddPS7XOxSFr6wg=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["study:prompt-types"]
@@ -125,9 +125,9 @@
     },
     {
       "id": "org.neoanki.recovery-policies",
-      "name": "Recovery Policies",
-      "summary": "Choose oldest-overdue or quick-wins ordering when a review backlog grows.",
-      "description": "Adds two bounded queue-scoring strategies: oldest overdue first and quick wins first. It receives only scoped card scheduling candidates during planning, cannot write content or settings, and has no network access.",
+      "name": "Review Priorities",
+      "summary": "Choose oldest-overdue or quick-wins ordering when a review queue grows.",
+      "description": "Select Oldest overdue first to tackle cards that have waited longest, or Quick wins first to begin with shorter, easier reviews. These choices change only the order of cards already eligible for study; they do not change due dates, grades, or review history.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -138,10 +138,10 @@
       "categories": ["study", "planning"],
       "tags": ["backlog", "queue", "overdue", "recovery", "planning"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-21T05:05:13Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-recovery-policies/releases/download/v2.0.0/org.neoanki.recovery-policies-2.0.0.neoanki-extension",
-        "sha256": "ff80d6fe1d278209e1b07352f3cfd3b4abfce25b32632611792b44f56292fecb",
+        "version": "2.0.2",
+        "publishedAt": "2026-07-21T07:00:48Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-recovery-policies/releases/download/v2.0.2/org.neoanki.recovery-policies-2.0.2.neoanki-extension",
+        "sha256": "db9d2827d91497d865484e57fcc038dced03ffdd1fb41322ada5def5e7d5e0b7",
         "publisherKey": "MCowBQYDK2VwAyEAIxKXBNaqQ9JF6qoyCO21jPjrnAlTd+bMTCrnhLUZUX8=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["study:queue-policies"]
@@ -149,9 +149,9 @@
     },
     {
       "id": "org.neoanki.shared-packs",
-      "name": "Shared Packs",
-      "summary": "Install versioned learning packs as extension-owned content with provenance.",
-      "description": "Validates Neo Anki pack files, installs their notes and provenance atomically, and applies later versions with field-level three-way merges. Conflicting local edits and scheduling-sensitive changes are preserved for explicit review; the extension has no network access and cannot modify content outside its reserved namespace.",
+      "name": "Learning Packs",
+      "summary": "Install and update reusable learning packs without losing local changes.",
+      "description": "Install versioned sets of notes and cards from Neo Anki pack files. When a publisher releases an update, Learning Packs applies new material while retaining your local edits and review progress. If both sides changed the same field, your value is kept and the conflict is shown for review. Pack files are processed locally.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -162,10 +162,10 @@
       "categories": ["authoring", "integration"],
       "tags": ["packs", "sharing", "provenance", "content", "install"],
       "release": {
-        "version": "2.0.1",
-        "publishedAt": "2026-07-21T05:14:54Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.1/org.neoanki.shared-packs-2.0.1.neoanki-extension",
-        "sha256": "b26de8cf5dcf7926ad8d0b35c4873e5ebb76b645ebd4cf1fee594c7471dec9dc",
+        "version": "2.0.3",
+        "publishedAt": "2026-07-21T07:00:47Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-shared-packs/releases/download/v2.0.3/org.neoanki.shared-packs-2.0.3.neoanki-extension",
+        "sha256": "54430d6af81f99b2e94e0f34e072b98106fa8d8a713da539218cd4a6574dd3ba",
         "publisherKey": "MCowBQYDK2VwAyEAvMftTCbTuDO3DGup/PC3oSYpKWo8pk+/OEBekZ7qb3Q=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["content:migrate", "content:patch-own", "ui:workspace"]
@@ -173,9 +173,9 @@
     },
     {
       "id": "org.neoanki.tts",
-      "name": "NeoAnki TTS",
-      "summary": "Generate, cache, and play provider-backed text-to-speech audio while studying in NeoAnki.",
-      "description": "Generate and cache review audio with configurable profiles, batch processing, and live playback. Supports OpenAI, ElevenLabs, Google Cloud Text-to-Speech, and Azure Speech. Prompt text is sent directly to the provider you select; API credentials stay in the operating system's secure credential storage and are not synchronized. Provider accounts and usage charges may apply.",
+      "name": "Text to Speech",
+      "summary": "Add spoken prompts and answers with device voices or cloud providers.",
+      "description": "Play audio live while studying or generate it ahead of time for consistent offline playback. Create profiles by collection or tag and choose system voices, OpenAI, ElevenLabs, Google Cloud Text-to-Speech, or Azure Speech. Cloud text goes directly to the provider you select; API keys stay encrypted on this device. Provider charges may apply.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -186,10 +186,10 @@
       "categories": ["study", "accessibility", "integration"],
       "tags": ["text-to-speech", "audio", "language-learning", "openai", "elevenlabs", "google-cloud", "azure-speech"],
       "release": {
-        "version": "2.0.2",
-        "publishedAt": "2026-07-20T21:31:54Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.2/org.neoanki.tts-2.0.2.neoanki-extension",
-        "sha256": "864c2fc39164a99873cfea38e4b2723d204806d690f9d155d6a731b76e49bdfc",
+        "version": "2.0.3",
+        "publishedAt": "2026-07-21T07:12:36Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-tts/releases/download/v2.0.3/org.neoanki.tts-2.0.3.neoanki-extension",
+        "sha256": "a260c96b3e376459c4dec8a7f9fbba68853ed1027b828d9ea8f897fa50d09d9a",
         "publisherKey": "MCowBQYDK2VwAyEAJQ7W9XDeuaRGuoXkWMt767ZVuvwV3N6H7U5hpO+BjYg=",
         "minimumNeoAnkiVersion": "0.2.0",
         "permissions": ["content:read", "content:patch-own", "media:create", "network:fetch", "secrets:device", "config:sync", "ui:settings", "ui:review"]
@@ -197,9 +197,9 @@
     },
     {
       "id": "org.neoanki.workspace",
-      "name": "Goals & Saved Views",
-      "summary": "Add learning goals, bounded planning signals, and reusable Library searches.",
-      "description": "Adds an isolated workspace panel for learning goals and saved Library views. Goal matches contribute bounded priority signals to planning. Goals and views are kept in extension-owned synchronized configuration; the extension cannot write learning content or access the network.",
+      "name": "Goals & Saved Searches",
+      "summary": "Set learning goals and save Library searches for quick reuse.",
+      "description": "Create learning goals with optional deadlines and search terms. Matching cards receive a modest priority boost in daily plans, while saved Library searches make recurring filters easy to reopen. Goals and searches synchronize across your Neo Anki devices; the extension cannot edit notes or connect to the internet.",
       "publisher": {
         "name": "NeoAnki contributors",
         "url": "https://github.com/neoanki"
@@ -210,10 +210,10 @@
       "categories": ["planning", "study"],
       "tags": ["goals", "saved-views", "priorities", "library", "planning"],
       "release": {
-        "version": "2.0.0",
-        "publishedAt": "2026-07-21T05:05:13Z",
-        "packageUrl": "https://github.com/neoanki/neoanki-workspace/releases/download/v2.0.0/org.neoanki.workspace-2.0.0.neoanki-extension",
-        "sha256": "0419020e884c096414d62bf51bcb5c7bb10c941b5863cbffcf950012ba984c01",
+        "version": "2.0.1",
+        "publishedAt": "2026-07-21T06:51:29Z",
+        "packageUrl": "https://github.com/neoanki/neoanki-workspace/releases/download/v2.0.1/org.neoanki.workspace-2.0.1.neoanki-extension",
+        "sha256": "c6a0cd3b6bfa4357b0506df52b5667de3c94f94a547954455c4283e65ed60a36",
         "publisherKey": "MCowBQYDK2VwAyEA/2OOiDcSDXwrflv6BnyhUHmMz0zAUU+UdxcesXIMqX0=",
         "minimumNeoAnkiVersion": "0.3.0",
         "permissions": ["study:signals", "config:sync", "ui:workspace"]
